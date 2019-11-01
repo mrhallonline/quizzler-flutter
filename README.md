@@ -1,6 +1,3 @@
-![App Brewery Banner](https://github.com/londonappbrewery/Images/blob/master/AppBreweryBanner.png)
-
-
 # Quizzler ❓
 
 ## Our Goal
@@ -16,7 +13,7 @@ We’re going to make a quiz app that tests your general knowledge. As one of th
 
 ## What you will learn
 
-- Modularising your code into separate classes.
+- Modularizing your code into separate classes.
 - Dart classes and objects.
 - Using class constructors.
 - Extracting Widgets to refactor your code.
@@ -55,7 +52,4 @@ Question('Some cats are actually allergic to humans', true),
 
 ```
 
-
 >This is a companion project to The App Brewery's Complete Flutter Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
-
-![End Banner](https://github.com/londonappbrewery/Images/blob/master/readme-end-banner.png)
