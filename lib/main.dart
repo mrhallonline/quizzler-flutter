@@ -35,7 +35,13 @@ class _QuizPageState extends State<QuizPage> {
     'A slug\'s blood is green.',
   ];
   
-  int questionIndex = 0;
+  List<bool> answers = [
+    false,
+    true,
+    true
+  ];
+
+  int questionNumber = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +55,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                questions[questionIndex],
+                questions[questionNumber],
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
@@ -73,8 +79,16 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                bool correctAnswer = answers[questionNumber];
+                if (correctAnswer == true) {
+                  scoreKeeper.add(Icon(Icons.check,
+                  color: Colors.green),);
+                } else {
+                  scoreKeeper.add(Icon(Icons.clear,
+                  color: Colors.red),);
+                }
                 setState(() {
-                questionIndex=2;
+                questionNumber++;
                   
                 });
               },
@@ -94,8 +108,16 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                bool correctAnswer = answers[questionNumber];
+                if (correctAnswer == false){
+                  scoreKeeper.add(Icon(Icons.check,
+                  color: Colors.green),);
+                } else {
+                  scoreKeeper.add(Icon(Icons.clear,
+                  color: Colors.red),);
+                }
                 setState(() {
-                  
+                questionNumber++;
                 });
               },
             ),
