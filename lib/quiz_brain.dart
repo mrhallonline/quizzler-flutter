@@ -1,6 +1,8 @@
 import 'question.dart';
 
 
+
+
 class QuizBrain {
   int _questionNumber = 0;
 
@@ -21,9 +23,11 @@ class QuizBrain {
   ];
 
   void nextQuestion() {
-    if (_questionNumber < _questionBank.length-1)
+    if (_questionNumber < _questionBank.length-1){
     _questionNumber++;
+    } 
   }
+
 
   String getQuestionText(){
     return _questionBank[_questionNumber].questionText;
@@ -32,4 +36,20 @@ class QuizBrain {
   bool getCorrectAnswer(){
     return _questionBank[_questionNumber].questionAnswer;
   }
+
+  bool isFinished() {
+    if (_questionNumber >= _questionBank.length-1){
+      print('questions finished');
+      return true;
+    } else {
+      print('questions not finished');
+      return false;
+    }
+  }
+
+  void reset(){
+    _questionNumber = 0;
+    
+  }
+
 }
